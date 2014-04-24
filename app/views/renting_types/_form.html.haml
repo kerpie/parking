@@ -1,0 +1,6 @@
+= form_for @renting_type do |f|
+	= f.text_field :name, placeholder: "Inserta nombre del tipo de alquiler"
+	%br
+	= f.number_field :hours, placeholder: "Inserta el numero de horas asociadas"
+	%br
+	= f.submit

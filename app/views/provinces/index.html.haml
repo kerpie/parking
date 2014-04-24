@@ -1,0 +1,9 @@
+%h1
+	Indice de provincias
+%ul
+	- @provinces.each do |province|
+		%li
+			= link_to province.name, edit_province_path(province)
+			= link_to "eliminar", province_path(province), method: :delete
+%section#new_country
+	= link_to "Nueva provincia", new_province_path

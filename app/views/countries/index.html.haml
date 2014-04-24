@@ -1,0 +1,9 @@
+%h1
+	Indice de paises
+%ul
+	- @countries.each do |country|
+		%li
+			= link_to country.name, edit_country_path(country)
+			= link_to "eliminar", country_path(country), method: :delete
+%section#new_country
+	= link_to "Nuevo pais", new_country_path

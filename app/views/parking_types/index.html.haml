@@ -1,0 +1,9 @@
+%h1
+	Indice de tipos de propiedad
+%ul
+	- @parking_types.each do |parking_type|
+		%li
+			= link_to parking_type.name, edit_parking_type_path(parking_type)
+			= link_to "eliminar", parking_type_path(parking_type), method: :delete
+%section#new_country
+	= link_to "Nuevo tipo de propiedad", new_parking_type_path

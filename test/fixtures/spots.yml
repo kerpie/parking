@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  start_date: 2014-04-22 17:00:33
+  end_date: 2014-04-22 17:00:33
+  renting_type_id: 1
+  parking_space_id: 1
+  user_id: 1
+
+two:
+  start_date: 2014-04-22 17:00:33
+  end_date: 2014-04-22 17:00:33
+  renting_type_id: 1
+  parking_space_id: 1
+  user_id: 1

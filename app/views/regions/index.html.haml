@@ -1,0 +1,9 @@
+%h1
+	Indice de regiones
+%ul
+	- @regions.each do |region|
+		%li
+			= link_to region.name, edit_region_path(region)
+			= link_to "eliminar", region_path(region), method: :delete
+%section#new_country
+	= link_to "Nueva region", new_region_path

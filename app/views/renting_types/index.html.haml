@@ -1,0 +1,9 @@
+%h1
+	Indice de tipos de propiedad
+%ul
+	- @renting_types.each do |renting_type|
+		%li
+			= link_to renting_type.name, edit_renting_type_path(renting_type)
+			= link_to "eliminar", renting_type_path(renting_type), method: :delete
+%section#new_country
+	= link_to "Nuevo tipo de alquiler", new_renting_type_path

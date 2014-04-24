@@ -1,0 +1,9 @@
+%h1
+	Indice de datos adicionales 
+%ul
+	- @additional_data.each do |additional_data|
+		%li
+			= link_to additional_data.name, edit_additional_data_path(additional_data)
+			= link_to "eliminar", additional_data_path(additional_data), method: :delete
+%section#new_country
+	= link_to "Nuevo dato adicional", new_additional_data_path

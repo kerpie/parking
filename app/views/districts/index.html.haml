@@ -1,0 +1,9 @@
+%h1
+	Indice de distritos
+%ul
+	- @districts.each do |district|
+		%li
+			= link_to district.name, edit_district_path(district)
+			= link_to "eliminar", district_path(district), method: :delete
+%section#new_country
+	= link_to "Nuevo distrito", new_district_path

@@ -1,0 +1,43 @@
+%aside#sidebar
+	= form_tag "#", id: "search_parking_form" do 
+		.search_parking_form_field
+			= label_tag "province", "Provincia "
+			= select_tag "province", options_from_collection_for_select(Province.all, :id, :name), prompt: " - seleccionar - "
+		.search_parking_form_field
+			= label_tag "district", "Distrito "
+			= select_tag "district", options_from_collection_for_select(District.all, :id, :name), prompt: " - seleccionar - "
+		.search_parking_form_field
+			= label_tag "renting_type", "Modalidad"
+			= select_tag "parking_type", options_from_collection_for_select(ParkingType.all, :id, :name), prompt: " - seleccionar - "
+		.search_parking_form_field.custom-size-1
+			= text_field_tag "from_date", "desde"
+		.search_parking_form_field.custom-size-2
+			= text_field_tag "to_date", "hasta"
+		.search_parking_form_submit_field
+			= submit_tag " ¡Parkeame! "
+	%ul#options
+		%li
+			= link_to "Búsqueda por mapa", "#"
+		%li
+			= link_to "Contáctanos", "#"
+	.fb-like{data: {href:"https://www.facebook.com/Parkeamecom",layout: "button_count", action: "like", show_faces: "true", share: "true"}}
+	#social_links
+		%ul
+			%li
+				= link_to "", "#",id: :fb_social_link
+			%li
+				= link_to "", "#", id: :twitter_social_link
+			%li
+				= link_to "", "#", id: :youtube_social_link
+			%li
+				= link_to "", "#", id: :pinterest_social_link
+			%li
+				= link_to "", "#", id: :google_social_link
+	#pseudo_footer
+		%ul
+			%li
+				= link_to "Términos", "#"
+			%li
+				= link_to "Parkeame.com", "#"
+			%li
+				= link_to "Empresa", "#"

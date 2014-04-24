@@ -1,0 +1,6 @@
+=form_for(@province) do |f|
+	= f.text_field :name, placeholder: "Nombre de la provincia"
+	%br
+	= f.collection_select :region_id, Region.all, :id, :name, prompt: "Elije una region"
+	%br
+	= f.submit 
