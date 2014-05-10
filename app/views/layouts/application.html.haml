@@ -4,7 +4,7 @@
 		%title
 			Parking
 		= stylesheet_link_tag    "application", media: "all"
-		= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Cuprum:400,700'
+		= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Exo:400,600'
 		= javascript_include_tag "application"
 		= csrf_meta_tags
 	%body
@@ -13,7 +13,9 @@
 			(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));
 
 		= render "layouts/header" 
-		= render "layouts/sidebar"
 		#content
+			= render "layouts/sidebar"
 			= yield
-		= yield :ready_scripts
+		/ #user_sign_in{ style: "position: absolute; z-index: 100; top: 45%; left:45%;"}
+		/ 	= render "layouts/user_sign_in_form"
+		= yield :scripts

@@ -89,7 +89,7 @@ html {
 
 body {
     margin: 0;
-    font-family: Cuprum, sans-serif;
+    font-family: "Exo", sans-serif;
 }
 
 /* ==========================================================================
@@ -425,6 +425,9 @@ table {
   background: #363639;
   height: 50px;
   margin: 0px 0px 10px 0px;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
   #logo-container{
     width: 250px;
     float: left;
@@ -447,7 +450,7 @@ table {
         border-bottom: 3px solid #363639;
         a{
           display: block;
-          padding: 17px 10px 10px;
+          padding: 14px 10px 10px;
           text-decoration: none;
           color: white;
         }
@@ -459,6 +462,42 @@ table {
   }
 }
 
+#content{
+  background: red;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+#user_sign_up{
+  background: url(image-path("dot_pattern.png")) repeat, url(image-path("sign_up_bg.jpg")) no-repeat center center fixed;
+  background-size: auto, cover;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  overflow: hidden;
+  #sign_up_container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    background: yellow;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 10px;
+    #user_sign_up_form{
+      float: left;
+      width: 300px;
+    }
+  }
+}
+
 #sidebar{
   position: fixed;
   top: 60px;
@@ -466,7 +505,7 @@ table {
   width: 250px;
   background: #F4F3F2;
   padding: 60px 0px 0px;
-  z-index: -1;
+  z-index: 2;
   #search_parking_form{
     width: 250px;
     .search_parking_form_field{
@@ -647,3 +686,4 @@ table {
       }
     }
 }
+

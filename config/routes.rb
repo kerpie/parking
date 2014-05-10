@@ -1,7 +1,9 @@
 Parking::Application.routes.draw do
-
+  
   root "parking_spaces#index"
   
+  devise_for :users
+  devise_for :admins
   resources :parking_spaces  
   resources :additional_data, only: [:index, :new, :create, :edit, :update, :destroy]  
   resources :parking_types, only: [:index, :new, :create, :edit, :update, :destroy]
@@ -10,6 +12,7 @@ Parking::Application.routes.draw do
   resources :regions, only: [:index, :new, :create, :edit, :update, :destroy]
   resources :provinces, only: [:index, :new, :create, :edit, :update, :destroy]
   resources :districts, only: [:index, :new, :create, :edit, :update, :destroy]
+
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

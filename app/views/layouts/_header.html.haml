@@ -2,6 +2,11 @@
 	#logo-container
 		=image_tag "logo.png", id: "logo"
 	%nav#navigation-bar
-		%ul
-			%li#start-session
-				= link_to "Iniciar sesión", "#"
+		- if user_signed_in?
+			%ul
+				%li
+					= link_to "Cerrar sesion", destroy_user_session_path, method: :delete
+		- else
+			%ul
+				%li#start-session
+					= link_to "Iniciar sesión", "#"
